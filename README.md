@@ -1,0 +1,2 @@
+# ListaSuperEdgar
+Examen de aptitudes
