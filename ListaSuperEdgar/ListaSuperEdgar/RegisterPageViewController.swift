@@ -37,6 +37,8 @@ class RegisterPageViewController: UIViewController {
     
     @IBAction func RegistroCuentaButton(_ sender: Any)
     {
+        
+        //Comentario inutil
     
         NombreUser  = NombreUserText.text!;
         EmailUser  = EmailUserText.text!;
