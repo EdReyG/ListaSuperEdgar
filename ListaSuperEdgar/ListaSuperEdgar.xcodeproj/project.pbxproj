@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39DD552EF3B9B801E88AB82A /* Pods_ListaSuperEdgar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113197B14F227F2B2D0A4E39 /* Pods_ListaSuperEdgar.framework */; };
 		8FA9E8F61F3F996F00829BBB /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA9E8F51F3F996F00829BBB /* RegisterPageViewController.swift */; };
+		8FA9E8F81F40166B00829BBB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8FA9E8F71F40166B00829BBB /* Podfile */; };
+		8FA9E8FA1F40DE0400829BBB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA9E8F91F40DE0400829BBB /* LoginViewController.swift */; };
 		8FFB64D61F3EA4BA00218DD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB64D51F3EA4BA00218DD4 /* AppDelegate.swift */; };
 		8FFB64D81F3EA4BA00218DD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB64D71F3EA4BA00218DD4 /* ViewController.swift */; };
 		8FFB64DB1F3EA4BA00218DD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FFB64D91F3EA4BA00218DD4 /* Main.storyboard */; };
@@ -16,7 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		113197B14F227F2B2D0A4E39 /* Pods_ListaSuperEdgar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListaSuperEdgar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		575203752252054EE33EC199 /* Pods-ListaSuperEdgar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListaSuperEdgar.release.xcconfig"; path = "ListaSuperEdgar/Pods/Target Support Files/Pods-ListaSuperEdgar/Pods-ListaSuperEdgar.release.xcconfig"; sourceTree = "<group>"; };
+		77847BF4FA076FA6BF46BCAA /* Pods-ListaSuperEdgar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListaSuperEdgar.debug.xcconfig"; path = "ListaSuperEdgar/Pods/Target Support Files/Pods-ListaSuperEdgar/Pods-ListaSuperEdgar.debug.xcconfig"; sourceTree = "<group>"; };
 		8FA9E8F51F3F996F00829BBB /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
+		8FA9E8F71F40166B00829BBB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8FA9E8F91F40DE0400829BBB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8FFB64D21F3EA4BA00218DD4 /* ListaSuperEdgar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListaSuperEdgar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFB64D51F3EA4BA00218DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FFB64D71F3EA4BA00218DD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39DD552EF3B9B801E88AB82A /* Pods_ListaSuperEdgar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B46F5D898338FAD20076D36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77847BF4FA076FA6BF46BCAA /* Pods-ListaSuperEdgar.debug.xcconfig */,
+				575203752252054EE33EC199 /* Pods-ListaSuperEdgar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8FFB64C91F3EA4B900218DD4 = {
 			isa = PBXGroup;
 			children = (
 				8FFB64D41F3EA4BA00218DD4 /* ListaSuperEdgar */,
 				8FFB64D31F3EA4BA00218DD4 /* Products */,
+				2B46F5D898338FAD20076D36 /* Pods */,
+				99ACF95621CA13C89B8360D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +83,18 @@
 				8FFB64DE1F3EA4BA00218DD4 /* LaunchScreen.storyboard */,
 				8FFB64E11F3EA4BA00218DD4 /* Info.plist */,
 				8FA9E8F51F3F996F00829BBB /* RegisterPageViewController.swift */,
+				8FA9E8F71F40166B00829BBB /* Podfile */,
+				8FA9E8F91F40DE0400829BBB /* LoginViewController.swift */,
 			);
 			path = ListaSuperEdgar;
+			sourceTree = "<group>";
+		};
+		99ACF95621CA13C89B8360D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				113197B14F227F2B2D0A4E39 /* Pods_ListaSuperEdgar.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FFB64E41F3EA4BA00218DD4 /* Build configuration list for PBXNativeTarget "ListaSuperEdgar" */;
 			buildPhases = (
+				8492BCDAD0B51BAA8C0534A2 /* [CP] Check Pods Manifest.lock */,
 				8FFB64CE1F3EA4B900218DD4 /* Sources */,
 				8FFB64CF1F3EA4B900218DD4 /* Frameworks */,
 				8FFB64D01F3EA4B900218DD4 /* Resources */,
+				5062980E2C3711F6FF95C9AE /* [CP] Embed Pods Frameworks */,
+				FAC123274E4DB53D40050A04 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,17 +161,81 @@
 			files = (
 				8FFB64E01F3EA4BA00218DD4 /* LaunchScreen.storyboard in Resources */,
 				8FFB64DD1F3EA4BA00218DD4 /* Assets.xcassets in Resources */,
+				8FA9E8F81F40166B00829BBB /* Podfile in Resources */,
 				8FFB64DB1F3EA4BA00218DD4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5062980E2C3711F6FF95C9AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/ListaSuperEdgar/Pods/Target Support Files/Pods-ListaSuperEdgar/Pods-ListaSuperEdgar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TRON/TRON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TRON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/ListaSuperEdgar/Pods/Target Support Files/Pods-ListaSuperEdgar/Pods-ListaSuperEdgar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8492BCDAD0B51BAA8C0534A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ListaSuperEdgar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAC123274E4DB53D40050A04 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/ListaSuperEdgar/Pods/Target Support Files/Pods-ListaSuperEdgar/Pods-ListaSuperEdgar-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/ListaSuperEdgar/Pods/Target Support Files/Pods-ListaSuperEdgar/Pods-ListaSuperEdgar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8FFB64CE1F3EA4B900218DD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FA9E8FA1F40DE0400829BBB /* LoginViewController.swift in Sources */,
 				8FFB64D81F3EA4BA00218DD4 /* ViewController.swift in Sources */,
 				8FFB64D61F3EA4BA00218DD4 /* AppDelegate.swift in Sources */,
 				8FA9E8F61F3F996F00829BBB /* RegisterPageViewController.swift in Sources */,
@@ -260,6 +357,7 @@
 		};
 		8FFB64E51F3EA4BA00218DD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77847BF4FA076FA6BF46BCAA /* Pods-ListaSuperEdgar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ListaSuperEdgar/Info.plist;
@@ -272,6 +370,7 @@
 		};
 		8FFB64E61F3EA4BA00218DD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 575203752252054EE33EC199 /* Pods-ListaSuperEdgar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ListaSuperEdgar/Info.plist;

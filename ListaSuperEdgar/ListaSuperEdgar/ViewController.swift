@@ -7,16 +7,20 @@
 //
 
 import UIKit
-//import GoogleMaps
+import GoogleMaps
 
 class ViewController: UIViewController
 {
-
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        /*GMSServices.provideAPIKey("AIzaSyDbM_vXXTCswNPRGyuQqholjN_X8qhd1rM")
+        
+        self.performSegue(withIdentifier: "LoginView", sender: self);
+        
+        //GoogleMaps
+        GMSServices.provideAPIKey("AIzaSyDbM_vXXTCswNPRGyuQqholjN_X8qhd1rM")
         
         let camera = GMSCameraPosition.camera(withLatitude: -33.868,
                                               longitude:151.2086, zoom:6)
@@ -25,25 +29,17 @@ class ViewController: UIViewController
         
         marker.position = camera.target
         marker.snippet = "Hello World"
-        marker.appearAnimation = kGMSMarkerAnimationPop
+        //marker.appearAnimation = kGMSMarkerAnimationPop
         marker.map = mapView
         
-        self.view = mapView */
+        self.view = mapView
         
-        self.performSegue(withIdentifier: "LoginView", sender: self);
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewDidAppear(_ animated: Bool)
-    {
-        
-            }
-
-    
+    }    
 
 }
 

@@ -38,7 +38,7 @@ class RegisterPageViewController: UIViewController {
     @IBAction func RegistroCuentaButton(_ sender: Any)
     {
         
-        //Comentario inutil
+        
     
         NombreUser  = NombreUserText.text!;
         EmailUser  = EmailUserText.text!;
@@ -46,7 +46,7 @@ class RegisterPageViewController: UIViewController {
         RepeatPasswordUser = RepeatPasswordUserText.text!;
         
         //Checar espacios vacios
-      /*  if(NombreUser.isEmpty || EmailUser!.isEmpty || (PasswordUser!.isEmpty) || (RepeatPasswordUser!.isEmpty))
+        if(NombreUser.isEmpty || EmailUser.isEmpty || (PasswordUser.isEmpty) || (RepeatPasswordUser.isEmpty))
         {
             //Mensaje de alerta
             displayMyAlertMessage(userMessage: "Se requieren todos los espacios");
@@ -61,24 +61,41 @@ class RegisterPageViewController: UIViewController {
             return;
         }
         
+        //Guardar la información
+        UserDefaults.standard.set(NombreUser, forKey:"nombre");
+        UserDefaults.standard.set(EmailUser, forKey:"email");
+        UserDefaults.standard.set(PasswordUser, forKey:"password");
+        UserDefaults.standard.synchronize();
+        
+        let myAlert = UIAlertController(title: "Alert", message: "Registro exitoso. ¡Gracias!", preferredStyle: UIAlertControllerStyle.alert);
+        
+        let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.default)
+        
+            self.dismiss(animated:true, completion:nil);
+        
+        
+        myAlert.addAction(okAction);
+        self.present(myAlert, animated:true, completion:nil);
+        
+        
     }
     
-    //Guardar la información en la base de datos
-    NSUserDefaults.standardUserDefaults().setObject(NombreUser, forKey:"nombre");
-    NSUserDefaults.standardUserDefaults().setObject(EmailUser, forKey:"email");
-    NSUserDefaults.standardUserDefaults().setObject(PasswordUser, forKey:"password");
-    NSUserDefaults.standardUserDefaults().synchronize();
+    @IBAction func YaHayCuentaButton(_ sender: Any)
+    {
+        self.dismiss(animated:true, completion:nil);
+    }
+   
 
     func displayMyAlertMessage(userMessage:String)
     {
-        var myAlert = UIAlertController(nibName:"Alerta", bundle: userMessage);
+        let myAlert = UIAlertController(title:"Alerta", message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
         
         let okAction = UIAlertAction(title: "Ok", style:UIAlertActionStyle.default, handler:nil);
         
         myAlert.addAction(okAction);
         
-        self.presentViewController(myAlert, animated:true, completion:nil);
-    } */
+        self.present(myAlert, animated:true, completion:nil);
+    }
     
     /*
     // MARK: - Navigation
@@ -90,4 +107,3 @@ class RegisterPageViewController: UIViewController {
     }
     */
     }
-}

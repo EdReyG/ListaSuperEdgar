@@ -1,0 +1,10 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'ListaSuperEdgar' do
+pod 'GoogleMaps'
+pod 'GooglePlaces'
+pod 'TRON'
+platform :ios, '10.2'
+use_frameworks!
+
+end
