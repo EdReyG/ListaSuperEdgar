@@ -15,6 +15,9 @@ class LoginViewController: UIViewController
     
     @IBOutlet weak var LoginPasswordText: UITextField!
     
+    @IBOutlet weak var ImgLogin: UIImageView!
+    var AgregarImg: UIImage?
+    
     var LoginEmail = "";
     var LoginPassword = "";
     var DBEmailStored = "";
@@ -23,6 +26,7 @@ class LoginViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.ImgLogin.image = UIImage.init(named: "superImg.jpg")
 
         // Do any additional setup after loading the view.
     }
@@ -39,9 +43,10 @@ class LoginViewController: UIViewController
         LoginEmail = LoginEmailText.text!;
         LoginPassword = LoginPasswordText.text!;
         
+        //Revisar que el email  y contraseña dados se encuentran guardados en memoria
         DBEmailStored = UserDefaults.standard.string(forKey: "email")!;
         DBPasswordStored = UserDefaults.standard.string(forKey: "password")!;
-        
+        //Revisar que el email y contraseña del usuario son correctos.
         if(DBEmailStored == LoginEmail)
         {
             if(DBPasswordStored == LoginPassword)

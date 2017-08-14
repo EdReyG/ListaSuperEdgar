@@ -14,6 +14,7 @@
 		8FA9E8FC1F41042600829BBB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA9E8FB1F41042500829BBB /* MapViewController.swift */; };
 		8FA9E8FE1F411C6E00829BBB /* TableViewListas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA9E8FD1F411C6E00829BBB /* TableViewListas.swift */; };
 		8FA9E9001F4124EC00829BBB /* AgregarListaSuper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA9E8FF1F4124EC00829BBB /* AgregarListaSuper.swift */; };
+		8FA9E9021F423F2300829BBB /* superImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FA9E9011F423F2300829BBB /* superImg.jpg */; };
 		8FFB64D61F3EA4BA00218DD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB64D51F3EA4BA00218DD4 /* AppDelegate.swift */; };
 		8FFB64D81F3EA4BA00218DD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB64D71F3EA4BA00218DD4 /* ViewController.swift */; };
 		8FFB64DB1F3EA4BA00218DD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FFB64D91F3EA4BA00218DD4 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		8FA9E8FB1F41042500829BBB /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8FA9E8FD1F411C6E00829BBB /* TableViewListas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewListas.swift; sourceTree = "<group>"; };
 		8FA9E8FF1F4124EC00829BBB /* AgregarListaSuper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgregarListaSuper.swift; sourceTree = "<group>"; };
+		8FA9E9011F423F2300829BBB /* superImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = superImg.jpg; sourceTree = "<group>"; };
 		8FFB64D21F3EA4BA00218DD4 /* ListaSuperEdgar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListaSuperEdgar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFB64D51F3EA4BA00218DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FFB64D71F3EA4BA00218DD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				8FA9E8FB1F41042500829BBB /* MapViewController.swift */,
 				8FA9E8FD1F411C6E00829BBB /* TableViewListas.swift */,
 				8FA9E8FF1F4124EC00829BBB /* AgregarListaSuper.swift */,
+				8FA9E9011F423F2300829BBB /* superImg.jpg */,
 			);
 			path = ListaSuperEdgar;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FFB64E01F3EA4BA00218DD4 /* LaunchScreen.storyboard in Resources */,
+				8FA9E9021F423F2300829BBB /* superImg.jpg in Resources */,
 				8FFB64DD1F3EA4BA00218DD4 /* Assets.xcassets in Resources */,
 				8FA9E8F81F40166B00829BBB /* Podfile in Resources */,
 				8FFB64DB1F3EA4BA00218DD4 /* Main.storyboard in Resources */,

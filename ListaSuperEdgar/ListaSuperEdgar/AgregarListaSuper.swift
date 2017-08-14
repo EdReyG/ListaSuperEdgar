@@ -14,9 +14,14 @@ var temp = [""];
 class AgregarListaSuper: UIViewController
 {
     
+    
+    @IBOutlet weak var ImgSuper: UIImageView!
+    var AgregarImg: UIImage?
+    
+    
     @IBOutlet weak var InputMandado: UITextField!
     
-    
+    //Agregar mandado al arreglo de TableView
     @IBAction func ButtonAgregarLista(_ sender: Any)
     {
         if(InputMandado.text != "")
@@ -29,6 +34,7 @@ class AgregarListaSuper: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.ImgSuper.image = UIImage.init(named: "superImg.jpg")
 
         // Do any additional setup after loading the view.
     }

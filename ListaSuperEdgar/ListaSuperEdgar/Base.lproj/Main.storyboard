@@ -82,6 +82,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ImgLogin" destination="8gY-15-ctS" id="CZb-Xe-w4M"/>
                         <outlet property="LoginEmailText" destination="01G-AR-3Nd" id="wnm-Xi-J0m"/>
                         <outlet property="LoginPasswordText" destination="2K2-KU-KWV" id="bei-4Z-99E"/>
                     </connections>
@@ -180,17 +181,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q26-lS-OuA">
+                                <rect key="frame" x="-1" y="20" width="376" height="281"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Agregar Lista de Super" id="yqO-Lh-BsX"/>
                     <connections>
+                        <outlet property="ImgSuper" destination="Q26-lS-OuA" id="ko7-DQ-uo3"/>
                         <outlet property="InputMandado" destination="sR0-Qp-CWt" id="3mv-rb-xkr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwv-9c-Gpa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1682" y="1340"/>
+            <point key="canvasLocation" x="1680.8" y="1339.8800599700151"/>
         </scene>
         <!--Listas de Super-->
         <scene sceneID="bLo-8M-9H7">

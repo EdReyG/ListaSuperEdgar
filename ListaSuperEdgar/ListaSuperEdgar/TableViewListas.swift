@@ -15,11 +15,13 @@ class TableViewListas: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     @IBOutlet weak var TableListas: UITableView!
     
+    //Muestra en la TableView el numero de elementos en el arreglo de listas
     public func tableView(_ tableView:UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return (Listas.count)
     }
     
+    //Mostrar la información de las celdas
     public func tableView(_ tableView:UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "CellLista")
@@ -27,6 +29,7 @@ class TableViewListas: UIViewController, UITableViewDelegate, UITableViewDataSou
         return (cell)
     }
     
+    //Función para eliminar elementos del TableView
     func tableView(_ tableView:UITableView, commit eidtingStyle:UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
         if(eidtingStyle == UITableViewCellEditingStyle.delete)
@@ -53,7 +56,7 @@ class TableViewListas: UIViewController, UITableViewDelegate, UITableViewDataSou
         // Dispose of any resources that can be recreated.
     }
     
-    
+    //Regresar al View del mapa
     @IBAction func RegresoMapa(_ sender: Any)
     {
         self.performSegue(withIdentifier: "RegresoMapa", sender: self)
