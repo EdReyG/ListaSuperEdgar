@@ -8,21 +8,22 @@
 
 import UIKit
 
+var Lista = [""];
+var temp = [""];
+
 class AgregarListaSuper: UIViewController
 {
     
     @IBOutlet weak var InputMandado: UITextField!
     
     
-    @IBAction func AgregarMandado(_ sender: Any)
-    {
-        
-    }
-
-    
     @IBAction func ButtonAgregarLista(_ sender: Any)
     {
-        
+        if(InputMandado.text != "")
+        {
+            Listas.append(InputMandado.text!)
+            InputMandado.text = ""
+        }
     }
     
     override func viewDidLoad()

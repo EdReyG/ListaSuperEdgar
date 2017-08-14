@@ -8,8 +8,7 @@
 
 import UIKit
 
-var Vacia = "No hay ninguna lista";
-var Listas = [Vacia]
+var Listas = [""]
 
 class TableViewListas: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
@@ -30,11 +29,16 @@ class TableViewListas: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView:UITableView, commit eidtingStyle:UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
-        /*if(eidtingStyle == UITableViewCellEditingStyle.delete)
+        if(eidtingStyle == UITableViewCellEditingStyle.delete)
         {
-            self.Listas.remove(at: indexPath.row)
-            myTableView.reloadData()
-        }*/
+            Listas.remove(at: indexPath.row)
+            TableListas.reloadData()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
+        TableListas.reloadData()
     }
     
     override func viewDidLoad()
@@ -49,6 +53,11 @@ class TableViewListas: UIViewController, UITableViewDelegate, UITableViewDataSou
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func RegresoMapa(_ sender: Any)
+    {
+        self.performSegue(withIdentifier: "RegresoMapa", sender: self)
+    }
 
     /*
     // MARK: - Navigation
