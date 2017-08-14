@@ -103,24 +103,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pW-5d-OZP">
-                                <rect key="frame" x="61" y="516" width="253" height="42"/>
+                                <rect key="frame" x="61" y="587" width="253" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Checar mis listas de super"/>
+                                <connections>
+                                    <action selector="ListaViewButton:" destination="u4c-Wk-H9h" eventType="touchUpInside" id="khD-hD-aDE"/>
+                                    <segue destination="QKD-zH-L18" kind="showDetail" identifier="ListasSuper" id="ttc-Ni-Pnb"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Supermercados cercanos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPx-er-m5p">
-                                <rect key="frame" x="76" y="36" width="222" height="21"/>
+                                <rect key="frame" x="76" y="103" width="222" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="enr-rI-FVt">
-                                <rect key="frame" x="0.0" y="105" width="375" height="386"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqb-xH-MiH">
+                                <rect key="frame" x="0.0" y="132" width="375" height="425"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="pw2-pl-wnC" kind="embed" id="lME-mb-Onk"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7E-Se-Sul">
+                                <rect key="frame" x="263" y="65" width="96" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Cerrar sesión"/>
+                                <connections>
+                                    <action selector="LogoutButton:" destination="u4c-Wk-H9h" eventType="touchUpInside" id="Rdy-qc-ya0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -134,10 +151,10 @@
             </objects>
             <point key="canvasLocation" x="876" y="-73.313343328335833"/>
         </scene>
-        <!--Item 2-->
+        <!--Agregar Lista de Super-->
         <scene sceneID="qic-cj-HcP">
             <objects>
-                <viewController id="1O0-ap-age" sceneMemberID="viewController">
+                <viewController id="1O0-ap-age" customClass="AgregarListaSuper" customModule="ListaSuperEdgar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i4K-i9-nar"/>
                         <viewControllerLayoutGuide type="bottom" id="ASk-ee-uNJ"/>
@@ -145,18 +162,50 @@
                     <view key="view" contentMode="scaleToFill" id="VcI-Qx-tme">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByV-tS-lQl">
+                                <rect key="frame" x="136" y="356" width="103" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Agregar Lista"/>
+                                <connections>
+                                    <action selector="ButtonAgregarLista:" destination="1O0-ap-age" eventType="touchUpInside" id="A7B-Hj-fGX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2u-nM-hLZ">
+                                <rect key="frame" x="120" y="276" width="140" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Agregar mandado"/>
+                                <connections>
+                                    <action selector="AgregarMandado:" destination="1O0-ap-age" eventType="touchUpInside" id="uIb-g6-8O2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mandado" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sR0-Qp-CWt">
+                                <rect key="frame" x="87" y="190" width="212" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="yqO-Lh-BsX"/>
+                    <tabBarItem key="tabBarItem" title="Agregar Lista de Super" id="yqO-Lh-BsX"/>
+                    <connections>
+                        <outlet property="InputMandado" destination="sR0-Qp-CWt" id="3mv-rb-xkr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwv-9c-Gpa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="2038"/>
+            <point key="canvasLocation" x="876" y="2048.7256371814096"/>
         </scene>
-        <!--Item 1-->
+        <!--Listas de Super-->
         <scene sceneID="bLo-8M-9H7">
             <objects>
-                <viewController id="jrW-6R-Tsd" sceneMemberID="viewController">
+                <viewController id="jrW-6R-Tsd" customClass="TableViewListas" customModule="ListaSuperEdgar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oss-2b-P4d"/>
                         <viewControllerLayoutGuide type="bottom" id="d72-jP-uaB"/>
@@ -166,11 +215,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="70C-dv-0qn">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="431"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="527"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Aoa-MO-Qtw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Aoa-MO-Qtw" customClass="CellLista">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Aoa-MO-Qtw" id="cMN-vh-vTI">
@@ -179,15 +228,22 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jrW-6R-Tsd" id="tkE-fb-aer"/>
+                                    <outlet property="delegate" destination="jrW-6R-Tsd" id="LN7-DY-7Z8"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="I9W-N7-6Oy"/>
+                    <tabBarItem key="tabBarItem" title="Listas de Super" id="I9W-N7-6Oy"/>
+                    <connections>
+                        <outlet property="TableListas" destination="70C-dv-0qn" id="HaD-UN-3q1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A5c-b9-L11" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1641" y="1340"/>
+            <point key="canvasLocation" x="1640.8" y="1339.8800599700151"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Cfa-Bj-SEd">
@@ -205,7 +261,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fAv-nU-AXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="1340"/>
+            <point key="canvasLocation" x="876" y="1340"/>
         </scene>
         <!--Register Page View Controller-->
         <scene sceneID="Y87-RX-Bly">
@@ -327,6 +383,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKN-zA-cem" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="76" y="-73"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="V7t-rB-Mcb">
+            <objects>
+                <viewController id="pw2-pl-wnC" customClass="MapViewController" customModule="ListaSuperEdgar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VxG-1y-wt8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="425"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tD1-PJ-1zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="619"/>
         </scene>
     </scenes>
 </document>

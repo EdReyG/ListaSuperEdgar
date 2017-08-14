@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import GoogleMaps
 
 class ViewController: UIViewController
 {
     
+    var isUserLoggedIn = false;
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -19,20 +19,8 @@ class ViewController: UIViewController
         
         self.performSegue(withIdentifier: "LoginView", sender: self);
         
-        //GoogleMaps
-        GMSServices.provideAPIKey("AIzaSyDbM_vXXTCswNPRGyuQqholjN_X8qhd1rM")
         
-        let camera = GMSCameraPosition.camera(withLatitude: -33.868,
-                                              longitude:151.2086, zoom:6)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera:camera)
-        let marker = GMSMarker()
         
-        marker.position = camera.target
-        marker.snippet = "Hello World"
-        //marker.appearAnimation = kGMSMarkerAnimationPop
-        marker.map = mapView
-        
-        self.view = mapView
         
     }
     
@@ -41,5 +29,29 @@ class ViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }    
 
+    override func viewDidAppear(_ animated: Bool)
+    {
+        
+        isUserLoggedIn = UserDefaults.standard.bool(forKey: "userIsLoggedIn");
+        if(!isUserLoggedIn)
+        {
+            self.performSegue(withIdentifier: "LoginView", sender: self);
+        }   
+    }
+    
+    
+    @IBAction func LogoutButton(_ animated: Bool)
+    {
+        UserDefaults.standard.set(false, forKey:"userIsLoggedIn");
+        UserDefaults.standard.synchronize();
+        self.performSegue(withIdentifier: "LoginView", sender: self);
+    }
+    
+    
+    @IBAction func ListaViewButton(_ animated: Bool)
+    {
+        self.performSegue(withIdentifier: "ListasSuper", sender: self);
+    }
+    
 }
 
